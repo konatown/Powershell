@@ -9,6 +9,9 @@ You will need the Online Message ID from the More Information section of a Messa
 
 Write-host -ForegroundColor darkgray "The account you authenticate with must have Read/Manage permissions to the mailbox
 "
+
+Read-Host -Prompt 'Script finished, Press Enter to Connect to the MS Graph Module'
+
 #Connect to MS Graph
 Connect-MgGraph 
 
@@ -20,7 +23,6 @@ Input the E-Mail address of the recipient.
 $MessageID = Read-Host -Prompt '
 Input the full internet message ID from the Message Trace. Ex. "<BN0PR13MB5149C3E4SLEK2355JENSQ@BN0PR13MB5149.namprd13.prod.outlook.com>" You must include the angle brackets.
 >'
-
 
 #Get message properties
 $Message = Get-MgUserMessage -UserId $UPN -Filter "internetMessageId eq '$MessageID'"
