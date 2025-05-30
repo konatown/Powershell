@@ -22,9 +22,10 @@ Input the full internet message ID from the Message Trace. Ex. "<BN0PR13MB5149C3
 >'
 
 
-
+#Get message properties
 $Message = Get-MgUserMessage -UserId $UPN -Filter "internetMessageId eq '$MessageID'"
 
+#Display desired properties
 Write-host Subject: $Message.Subject
 Write-host Body: ($Message.Body |fl |out-string)
 Write-host Headers: ($Message.InternetMessageHeaders|fl |out-string)
