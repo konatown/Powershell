@@ -10,7 +10,7 @@ You will need the Online Message ID from the More Information section of a Messa
 Write-host -ForegroundColor darkgray "The account you authenticate with must have Read/Manage permissions to the mailbox
 "
 
-Read-Host -Prompt 'Script finished, Press Enter to Connect to the MS Graph Module'
+Read-Host -Prompt 'Press Enter to Connect to the MS Graph Module'
 
 #Connect to MS Graph
 Connect-MgGraph 
