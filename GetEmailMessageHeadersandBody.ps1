@@ -6,6 +6,9 @@ Write-host -ForegroundColor darkgray 'You must have the MS Graph SDK Powershell 
 Write-host -ForegroundColor darkgray "This script will retrieve the message headers for an E-Mail
 You will need the Online Message ID from the More Information section of a Message Trace
 "
+
+Write-host -ForegroundColor darkgray "The account you authenticate with must have Read/Manage permissions to the mailbox
+"
 #Connect to MS Graph
 Connect-MgGraph 
 
